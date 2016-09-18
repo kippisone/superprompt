@@ -31,8 +31,8 @@ module.exports = function(questions, done) {
       if (item.default) {
         description.grey('(' + item.default + ')');
       }
-      
-      description.txt(':', 'trim').print();
+
+      description.txt(':', 'trim').print(!module.exports.noColor);
 
       let args = [''];
       if (item.type === 'choose') {

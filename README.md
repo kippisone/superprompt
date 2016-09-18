@@ -46,47 +46,37 @@ See [Promptly documentation](https://github.com/IndigoUnited/node-promptly) for 
 Options
 -------
 
-  name        Set a property name
-
-  type        Set prompt type. Could be 'prompt', 'confirm',
-        'password' or 'choose'. Defaults to 'prompt'
-
-  values      Defines values for a 'choose' prompt
-        Example: values: ['aa', 'bb', 'cc'],
-
-  default     The default value. If not supplied, the input is mandatory
-
-  trim        Automatically trim the input
-
-  validator   A validator or an array of validators.
-
-  retry       Automatically retry if a validator fails
-
-  silent      Do not print what the user types
-
-  input       Input stream to read
-
-  output      Output streams to write
-
+ Name | Description
+ ---|---
+ `name` | Set a property name
+ `type` | Set prompt type. Could be 'prompt', 'confirm', 'password' or 'choose'. Defaults to 'prompt'
+ `values` | Defines values for a 'choose' prompt <br>Example: values: ['aa', 'bb', 'cc'],
+ `default` |  The default value. If not supplied, the input is mandatory
+ `trim` |  Automatically trim the input
+ `validator` |  A validator or an array of validators.
+ `retry` |  Automatically retry if a validator fails
+ `silent` |  Do not print what the user types
+ `input` |  Input stream to read
+ `output` |  Output streams to write
 
 
 API
 ---
 
-`promptlySynv.noColor = true;`
-Dissable colorized output
+#### Dissable colorized output
+`promptlySync.noColor = true;`
 
+#### Returns promptly
 `superPrompt.promptly`
-Returns promptly
 
+#### Calls promptly.prompt
 `superPrompt.prompt()`
-Calls promptly.prompt
 
+#### Calls promptly.confirm
 `superPrompt.confirm()`
-Calls promptly.confirm
 
+#### Calls promptly.password
 `superPrompt.password()`
-Calls promptly.password
 
+#### Calls promptly.choose
 `superPrompt.choose()`
-Calls promptly.choose
