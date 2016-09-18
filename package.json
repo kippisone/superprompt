@@ -1,25 +1,27 @@
 {
-  "name": "promptly-sync",
-  "version": "0.0.3",
+  "name": "superprompt",
+  "version": "0.1.0",
   "description": "Simple commandline prompting tool",
-  "main": "promptly-sync.js",
+  "main": "superprompt.js",
   "directories": {
     "test": "tests"
   },
   "dependencies": {
-    "chalk": "^1.1.0",
-    "promptly": "^0.2.1"
+    "colorfy": "^0.3.1",
+    "promptly": "^2.1.0"
   },
   "devDependencies": {
     "expect.js": "^0.3.1",
-    "sinon": "^1.15.4"
+    "inspect.js": "^1.3.0",
+    "lagoon-reporter": "^0.3.3",
+    "sinon": "^1.17.5"
   },
   "scripts": {
     "test": "mocha tests/*.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/AndiOxidant/promptly-sync"
+    "url": "https://github.com/AndiOxidant/superprompt"
   },
   "keywords": [
     "prompt",
@@ -29,7 +31,7 @@
   "author": "Andi Heinkelein <andi.oxidant@noname-media.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AndiOxidant/promptly-sync/issues"
+    "url": "https://github.com/AndiOxidant/superprompt/issues"
   },
-  "homepage": "https://github.com/AndiOxidant/promptly-sync"
+  "homepage": "https://github.com/AndiOxidant/superprompt"
 }
