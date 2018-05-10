@@ -1,7 +1,9 @@
 Superprompt
 =============
 
-Superprompt is a simple commandline prompting tool using `promptly`.
+Superprompt is a commandline prompting tool.
+It supports `string`, `boolean`, `number` and `array` fields.
+
 
 Installation
 ------------
@@ -12,36 +14,39 @@ Usage
 -----
 
 ```js
-let questions = [{
+const questions = [{
   name: 'name',
-  type: 'prompt',
-  description: 'Enter an username'
+  type: 'string',
+  question: 'Enter an username'
 }, {
-  name: 'password',
-  type: 'password',
-  description: 'Password for login'
+  name: 'isHuman',
+  type: 'boolean',
+  question: 'Are you a human? [yes/no]'
 }, {
-  name: 'email',
-  type: 'prompt',
-  description: 'Enter an email'
-}];
+  name: 'list',
+  type: 'array',
+  question: 'Add a few items'
+}]
 
-let superPrompt = require('superprompt');
-superPrompt(questions, function(err, result) {
-  console.log(result);
-});
+const superprompt = require('superprompt')
+
+superprompt.prompt(questions).then((answers) => {
+  console.log(answers)
+}).catch((err) => {
+  console.error(err)
+})
 
 //Result may looks like:
 {
   name: 'Andi',
-  password: '123456',
-  email: 'andi.oxidant@noname-media.com'
+  isHuman: true,
+  list: [
+    'banana',
+    'pear',
+    'mango'
+  ]
 }
 ```
-
-See [Promptly documentation](https://github.com/IndigoUnited/node-promptly) for more infos about promptly.
-
-
 
 Options
 -------
@@ -49,34 +54,11 @@ Options
  Name | Description
  ---|---
  `name` | Set a property name
- `type` | Set prompt type. Could be 'prompt', 'confirm', 'password' or 'choose'. Defaults to 'prompt'
- `values` | Defines values for a 'choose' prompt <br>Example: values: ['aa', 'bb', 'cc'],
- `default` |  The default value. If not supplied, the input is mandatory
- `trim` |  Automatically trim the input
- `validator` |  A validator or an array of validators.
- `retry` |  Automatically retry if a validator fails
- `silent` |  Do not print what the user types
- `input` |  Input stream to read
- `output` |  Output streams to write
-
-
-API
----
-
-#### Dissable colorized output
-`promptlySync.noColor = true;`
-
-#### Returns promptly
-`superPrompt.promptly`
-
-#### Calls promptly.prompt
-`superPrompt.prompt()`
-
-#### Calls promptly.confirm
-`superPrompt.confirm()`
-
-#### Calls promptly.password
-`superPrompt.password()`
-
-#### Calls promptly.choose
-`superPrompt.choose()`
+ `type` | Set a prompt type. Could be 'string', 'boolean', 'number' or 'array'. Defaults to 'string'.
+ `default` (not implemented yet)|  The default value. If not supplied, the input is mandatory
+ `trim` (not implemented yet)|  Automatically trim the input
+ `validator` (not implemented yet)|  A validator or an array of validators.
+ `retry` (not implemented yet)|  Automatically retry if a validator fails
+ `silent` (not implemented yet)|  Do not print what the user types
+ `input` (not implemented yet)|  Input stream to read
+ `output` (not implemented yet)|  Output streams to write

@@ -1,15 +1,15 @@
 'use strict';
 
-let promptly = require('promptly');
-let cf = require('colorfy');
+const promptly = require('promptly');
+const cf = require('colorfy');
 
 module.exports = function(questions, done) {
   return new Promise((resolve, reject) => {
-    let i = 0;
-    let result = {};
+    const i = 0;
+    const result = {};
 
-    let next = function() {
-      let item = questions[i++];
+    const next = function() {
+      const item = questions[i++];
       if (!item) {
         resolve(result);
         if (done) {
@@ -18,7 +18,7 @@ module.exports = function(questions, done) {
         return ;
       }
 
-      let promptOpts = {
+      const promptOpts = {
         default: item.default,
         trim: item.trim,
         validator: item.validator,
@@ -26,7 +26,7 @@ module.exports = function(questions, done) {
         silent: item.silent
       };
 
-      let description = cf().azure(item.description);
+      const description = cf().azure(item.question);
 
       if (item.default) {
         description.grey('(' + item.default + ')');
@@ -34,7 +34,7 @@ module.exports = function(questions, done) {
 
       description.txt(':', 'trim').print(!module.exports.noColor);
 
-      let args = [''];
+      const args = [''];
       if (item.type === 'choose') {
         args.push(item.values);
       }

@@ -2,11 +2,11 @@
 
 let inspect = require('inspect.js');
 let sinon = require('sinon');
-let superPrompt = require('../superprompt.js');
-let promptly = superPrompt.promptly;
+let superprompt = require('../superprompt.js');
+let promptly = superprompt.promptly;
 
 inspect.useSinon(sinon);
-superPrompt.noColor = true;
+superprompt.noColor = true;
 
 describe('PromptlySync', function() {
   let promptStub,
@@ -43,7 +43,7 @@ describe('PromptlySync', function() {
       type: 'prompt'
     });
 
-    superPrompt(questions, function(err, res) {
+    superprompt(questions, function(err, res) {
       inspect(res).isEql({
         testPrompt: 'Test',
         testPrompt2: 'Test'
@@ -71,7 +71,7 @@ describe('PromptlySync', function() {
       type: 'confirm'
     });
 
-    superPrompt(questions, function(err, res) {
+    superprompt(questions, function(err, res) {
       inspect(res).isEql({
         testPrompt: true,
         testPrompt2: false
@@ -99,7 +99,7 @@ describe('PromptlySync', function() {
       type: 'password'
     });
 
-    superPrompt(questions, function(err, res) {
+    superprompt(questions, function(err, res) {
       inspect(res).isEql({
         testPrompt: true,
         testPrompt2: false
@@ -129,7 +129,7 @@ describe('PromptlySync', function() {
       values: ['aa', 'bb']
     });
 
-    superPrompt(questions, function(err, res) {
+    superprompt(questions, function(err, res) {
       inspect(res).isEql({
         testPrompt: 'aa',
         testPrompt2: 'bb'
