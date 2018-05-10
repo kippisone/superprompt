@@ -6,6 +6,11 @@ class Prompt {
     this.questions = []
     this.truthyValues = /y|yes|on|true|enabled/i
     this.falseyValues = /n|no|off|false|disabled/i
+
+    this.rl = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout
+    })
   }
 
   ask (question) {
@@ -13,32 +18,30 @@ class Prompt {
   }
 
   prompt () {
-    const rl = readline.createInterface({
-      input: process.stdin,
-      output: process.stdout,
-      prompt: colorfy.yellow('? ')
-    })
-
-    const yellow = colorfy.yellow('?')
+    const yellow = colorfy.lime('?')
 
     this.answers = {}
     return new Promise((resolve, reject) => {
       const next = () => {
         const question = this.questions.shift()
         if (!question) {
-          rl.close()
+          this.rl.close()
           resolve(this.answers)
           return
         }
 
-        rl.question(`${yellow} ${colorfy.lgrey(question.question)}: `, (answer) => {
+        this.read(`${yellow} ${colorfy.lgrey(question.question)}: `, (answer) => {
           this.handleAnswer(question, answer)
           next()
-        });
+        })
       }
 
       next()
     })
+  }
+
+  read(question, callback) {
+    this.rl.question(question, callback)
   }
 
   handleAnswer (question, answer) {

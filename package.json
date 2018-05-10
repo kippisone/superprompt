@@ -1,14 +1,13 @@
 {
   "name": "superprompt",
   "version": "0.1.1",
-  "description": "Simple commandline prompting tool",
-  "main": "superprompt.js",
+  "description": "Superprompt is a commandline prompting tool with different prompt types",
+  "main": "./src/superprompt.js",
   "directories": {
     "test": "tests"
   },
   "dependencies": {
-    "colorfy": "2.0.1",
-    "promptly": "3.0.3"
+    "colorfy": "2.0.1"
   },
   "devDependencies": {
     "inspect.js": "1.11.7",
@@ -21,17 +20,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/AndiOxidant/superprompt"
+    "url": "https://github.com/Andifeind/superprompt"
   },
   "keywords": [
     "prompt",
     "prompting",
-    "confirm"
+    "confirm",
+    "input",
+    "console input",
+    "tty", "console",
+    "ask", "cli input", "choose",
+    "cli", "readline", "stdin"
   ],
-  "author": "Andi Heinkelein <andi.oxidant@noname-media.com>",
+  "author": "Andi Heinkelein <andifeind@noname-media.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AndiOxidant/superprompt/issues"
+    "url": "https://github.com/Andifeind/superprompt/issues"
   },
-  "homepage": "https://github.com/AndiOxidant/superprompt"
+  "homepage": "https://github.com/Andifeind/superprompt"
 }

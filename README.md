@@ -55,10 +55,3 @@ Options
  ---|---
  `name` | Set a property name
  `type` | Set a prompt type. Could be 'string', 'boolean', 'number' or 'array'. Defaults to 'string'.
- `default` (not implemented yet)|  The default value. If not supplied, the input is mandatory
- `trim` (not implemented yet)|  Automatically trim the input
- `validator` (not implemented yet)|  A validator or an array of validators.
- `retry` (not implemented yet)|  Automatically retry if a validator fails
- `silent` (not implemented yet)|  Do not print what the user types
- `input` (not implemented yet)|  Input stream to read
- `output` (not implemented yet)|  Output streams to write

@@ -1,6 +1,6 @@
-const ReadTTY = require('../src/utils/ReadTTY')
+const Prompt = require('../src/utils/Prompt')
 
-const rt = new ReadTTY()
+const rt = new Prompt()
 rt.ask({ question: 'How are you? (string)', name: 'bar', type: 'string' })
 rt.ask({ question: 'What do you do? (string)', name: 'foo', type: 'string' })
 rt.ask({ question: 'Do you like superprompt [yes/no] (boolean)?', name: 'likeIt', type: 'boolean' })
