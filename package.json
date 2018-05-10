@@ -1,6 +1,6 @@
 {
   "name": "superprompt",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Superprompt is a commandline prompting tool with different prompt types",
   "main": "./src/superprompt.js",
   "directories": {
@@ -28,9 +28,14 @@
     "confirm",
     "input",
     "console input",
-    "tty", "console",
-    "ask", "cli input", "choose",
-    "cli", "readline", "stdin"
+    "tty",
+    "console",
+    "ask",
+    "cli input",
+    "choose",
+    "cli",
+    "readline",
+    "stdin"
   ],
   "author": "Andi Heinkelein <andifeind@noname-media.com>",
   "license": "MIT",
