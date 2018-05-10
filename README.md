@@ -1,6 +1,8 @@
 Superprompt
 =============
 
+[![Build Status](https://travis-ci.org/Andifeind/superprompt.svg?branch=develop)](https://travis-ci.org/Andifeind/superprompt)
+
 Superprompt is a commandline prompting tool.
 It supports `string`, `boolean`, `number` and `array` fields.
 
