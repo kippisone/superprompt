@@ -1,6 +1,6 @@
 {
   "name": "superprompt",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Superprompt is a commandline prompting tool with different prompt types",
   "main": "./src/superprompt.js",
   "directories": {
