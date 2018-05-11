@@ -53,7 +53,8 @@ superprompt.prompt(questions).then((answers) => {
 Options
 -------
 
- Name | Description
- ---|---
- `name` | Set a property name
- `type` | Set a prompt type. Could be 'string', 'boolean', 'number' or 'array'. Defaults to 'string'.
+| Name      | Description                                                                                 |
+| --------- | ------------------------------------------------------------------------------------------- |
+| `name`    | Set a property name                                                                         |
+| `type`    | Set a prompt type. Could be 'string', 'boolean', 'number' or 'array'. Defaults to 'string'. |
+| `default` | Default value                                                                               |

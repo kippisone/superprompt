@@ -28,10 +28,11 @@ describe('Superprompt', function() {
       name: 'testPrompt',
       description: 'Make a prompt',
       default: 'test',
+      type: 'string'
     }, {
       name: 'testPrompt2',
       description: 'Make a second prompt',
-      type: 'prompt'
+      type: 'string'
     })
 
     return superprompt(questions).then((res) => {
