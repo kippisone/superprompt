@@ -31,7 +31,7 @@ class Prompt {
     })
   }
 
-  read (fn) {
+  read (question, fn) {
     const read = new Read(question)
     read.prompt
   }
