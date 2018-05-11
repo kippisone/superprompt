@@ -22,7 +22,7 @@ describe('Superprompt', function() {
   it('Should generate a prompt', function() {
     let questions = []
 
-    readStub.yields('Test')
+    readStub.yields(null, 'Test')
 
     questions.push({
       name: 'testPrompt',

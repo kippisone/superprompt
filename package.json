@@ -7,8 +7,7 @@
     "test": "tests"
   },
   "dependencies": {
-    "colorfy": "2.0.1",
-    "read": "^1.0.7"
+    "colorfy": "2.0.1"
   },
   "devDependencies": {
     "inspect.js": "1.11.7",
