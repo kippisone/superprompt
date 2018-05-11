@@ -9,7 +9,7 @@ class Read {
       terminal: true
     })
 
-    this.rl.setPrompt(colorfy.lime('? ') + conf.question + ' ')
+    this.rl.setPrompt(colorfy.lime('? ') + colorfy.lgrey(conf.question) + ' ')
     this.question = conf.question
 
     this.rl.on('SIGTERM', function () {
